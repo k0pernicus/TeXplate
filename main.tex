@@ -1,0 +1,71 @@
+\documentclass[pdftex,12pt,a4paper]{report}
+\usepackage[top=2.5cm,bottom=2.5cm,right=3cm,left=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[francais]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{setspace}
+
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{calc}
+
+%\usepackage{float}
+%\usepackage{fancybox}
+%\usepackage{caption}
+%\usepackage[]{titletoc}
+%\usepackage{array}
+%\usepackage{enumitem}
+%\usepackage{verbatim}
+
+% bibliographie
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+
+% some setup for captions
+%\captionsetup{figurewithin=none}
+%\captionsetup{tablewithin=none}
+
+%\AddThinSpaceBeforeFootnotes
+%\FrenchFootnotes
+%\setlength{\parskip}{1mm}
+
+\begin{document}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%Name of the report UE
+\newcommand{\ue}{UE}
+\newcommand{\masterName}{M.Name}
+\newcommand{\titleReport}{Title}
+\newcommand{\firstNameO}{firstname}
+\newcommand{\lastNameO}{lastname}
+\newcommand{\firstNameT}{firstname}
+\newcommand{\lastNameT}{lastname}
+
+%includes
+\newcommand{\introduction}{Introduction}
+\newcommand{\chapterOne}{Chapter One}
+\newcommand{\chapterTwo}{Chapter Two}
+\newcommand{\chapterThree}{Chapter Three}
+\newcommand{\conclusion}{Conclusion}
+
+\begin{spacing}{1.2}
+
+\include{includes/presentation}
+
+\tableofcontents
+
+\include{includes/introduction}
+\include{includes/chapter_one}
+\include{includes/chapter_two}
+\include{includes/chapter_three}
+\include{includes/conclusion}
+
+%Bibliographie
+\bibliographystyle{plain}
+\bibliography{includes/bibliography}
+
+\end{spacing}
+
+\end{document}
